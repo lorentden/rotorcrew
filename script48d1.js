@@ -1,5 +1,5 @@
 const SHIPPING_PRICE = 10;
-const CHECKOUT_ENDPOINT = "https://rotorcrew.free.fr-checkout.workers.dev/checkout";
+const CHECKOUT_ENDPOINT = "https://rotorcrew.free.fr-checkout.lauzfpv.workers.dev/checkout";
 
 const form = document.querySelector("#order-form");
 const subtotalElement = document.querySelector("#order-subtotal");

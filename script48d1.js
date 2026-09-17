@@ -1,5 +1,5 @@
 const SHIPPING_PRICE = 10;
-const CHECKOUT_ENDPOINT = "https://yeetlab-checkout.tmw-fpv.workers.dev/checkout";
+const CHECKOUT_ENDPOINT = "https://rotorcrew.free.fr-checkout.workers.dev/checkout";
 
 const form = document.querySelector("#order-form");
 const subtotalElement = document.querySelector("#order-subtotal");
@@ -107,14 +107,14 @@ function updateTotal() {
     input.closest(".order-line")?.classList.toggle("has-quantity", quantity > 0);
   });
 
-  subtotalElement.textContent = `CHF ${orderSubtotal()}`;
-  shippingElement.textContent = `CHF ${shippingTotal()}`;
-  totalElement.textContent = `CHF ${orderTotal()}`;
+  subtotalElement.textContent = `EUR ${orderSubtotal()}`;
+  shippingElement.textContent = `EUR ${shippingTotal()}`;
+  totalElement.textContent = `EUR ${orderTotal()}`;
 
   if (!checkoutInProgress) {
     checkoutButton.disabled = !hasItems;
     checkoutButton.textContent = hasItems
-      ? `Pay estimated CHF ${orderTotal()} with Stripe`
+      ? `Pay estimated EUR ${orderTotal()} with Stripe`
       : "Select at least one item";
   }
 }
@@ -213,7 +213,7 @@ async function loadCommunityGallery() {
 
       const img = document.createElement("img");
       img.src = image.thumb;
-      img.alt = image.alt || "Community Shreddo 5 build";
+      img.alt = image.alt || "Community RotorCrew 5 build";
       img.loading = "lazy";
 
       button.append(img);
